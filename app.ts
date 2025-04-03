@@ -30,7 +30,7 @@ app.post("/webhook", (req, res) => {
     res.json(result);
   });
 });
-// eventハンドルだからここの内容を変える。ここでapi叩く
+
 async function handleEvent(event: WebhookEvent) {
   if (event.type !== "message" || event.message.type !== "text") {
     return Promise.resolve(null);
